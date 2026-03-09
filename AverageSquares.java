@@ -26,11 +26,11 @@ public class AverageSquares {
 
         System.out.println("Sum of squares from " + startNum + " to " + endNum + ":");
 
-        while (startNum <= endNum) {
+        do {
             sum = sum + startNum * startNum;
             startNum++;
             quantity++;
-        }
+        } while (startNum <= endNum);
         System.out.println(sum / quantity);
     }
 }

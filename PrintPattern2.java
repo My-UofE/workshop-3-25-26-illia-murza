@@ -13,23 +13,29 @@ public class PrintPattern2 {
         int size = in.nextInt();
         System.out.println();
         
-        for (int i = 1; i <= size; i++) {
-            for (int j = i; j < (size + i); j++) {
-                System.out.print(j);
+        if (size < 1) {
+            System.out.println("too small!");
+        } else if (size > 5) {
+            System.out.println("too big!");
+        } else {
+            for (int i = 1; i <= size; i++) {
+                for (int j = i; j < (size + i); j++) {
+                    System.out.print(j);
+                }
+                for (int j = size + i - 1; j >= i; j--) {
+                    System.out.print(j);
+                }
+                System.out.println();
             }
-            for (int j = size + i - 1; j >= i; j--) {
-                System.out.print(j);
+            for (int i = size; i >= 1; i--) {
+                for (int j = i; j < (size + i); j++) {
+                    System.out.print(j);
+                }
+                for (int j = size + i - 1; j >= i; j--) {
+                    System.out.print(j);
+                }
+                System.out.println();
             }
-            System.out.println();
-        }
-        for (int i = size; i >= 1; i--) {
-            for (int j = i; j < (size + i); j++) {
-                System.out.print(j);
-            }
-            for (int j = size + i - 1; j >= i; j--) {
-                System.out.print(j);
-            }
-            System.out.println();
         }
     }
 }
